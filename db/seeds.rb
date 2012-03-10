@@ -5,3 +5,5 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+
+User.create(email:'cultofmetatron@aumlogic.com', password:'omnibus64', password_confirmation:'omnibus64')
