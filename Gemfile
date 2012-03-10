@@ -19,7 +19,11 @@ group :assets do
 
   gem 'uglifier', '>= 1.0.3'
 end
+
+gem 'bootstrap-sass'
+
 gem 'redcarpet'
+#gem 'liquid'
 gem 'jquery-rails'
 gem "haml-rails"
 gem 'devise'

@@ -7,3 +7,5 @@
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
 User.create(email:'cultofmetatron@aumlogic.com', password:'omnibus64', password_confirmation:'omnibus64')
+
+Blog.create(title:'main', description:'the main blog')

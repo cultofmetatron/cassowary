@@ -11,3 +11,7 @@
  *= require_self
  *= require_tree .
 */
+
+/* resets */
+/* twitter bootstrap */
+@import "bootstrap";
