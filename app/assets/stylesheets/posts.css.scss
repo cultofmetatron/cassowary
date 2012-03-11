@@ -1,3 +1,13 @@
 // Place all the styles related to the Posts controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+// require "_bootstrap"
+
+body {
+	background-color: black;
+}
+
+ul#blog_roll  li {
+	list-style-type: none;
+	display: block;
+}

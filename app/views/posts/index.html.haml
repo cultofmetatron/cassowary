@@ -1,29 +1,18 @@
-%h1 Listing posts
+%h1 Blog Posts
 
-%table
-  %tr
-    %th Blog
-    %th User
-    %th Date created
-    %th Published
-    %th Date published
-    %th Body
-    %th
-    %th
-    %th
-
-  - @posts.each do |post|
-    %tr
-      %td= post.blog_id
-      %td= post.user_id
-      %td= post.date_created
-      %td= post.published
-      %td= post.date_published
-      %td= post.body
-      %td= link_to 'Show', post
-      %td= link_to 'Edit', edit_post_path(post)
-      %td= link_to 'Destroy', post, :confirm => 'Are you sure?', :method => :delete
-
-%br
-
-= link_to 'New Post', new_post_path
+%ul{ id:"blog_roll" }
+    -@blog.posts.each do |post|
+        %li{ class:"post"}
+            %h3= post.title
+            %h4= post.description
+            %p=  post.body
+            %span{class:"user"}
+                By:
+                = post.user.email
+            %span{class:"date_created"}
+                created on: 
+                = post.date_created
+            - if post.published?
+                %span{class:"published_date"}
+                    published on: 
+                    = post.date_published

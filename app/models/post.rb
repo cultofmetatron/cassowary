@@ -10,5 +10,13 @@ before_create :set_create
   def set_create
     self.date_created = Time.now
   end
+  
+  def published?
+    if self.published == 0
+      return false
+    elif self.published == 1
+      return true
+    end
+  end
 
 end

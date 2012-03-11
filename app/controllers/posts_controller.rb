@@ -1,8 +1,10 @@
 class PostsController < ApplicationController
   # GET /posts
   # GET /posts.json
+  before_filter :load_data
+  
   def index
-    @posts = Post.all
+    
 
     respond_to do |format|
       format.html # index.html.erb
@@ -24,7 +26,7 @@ class PostsController < ApplicationController
   # GET /posts/new
   # GET /posts/new.json
   def new
-    @post = Post.new
+    @post = @blog.posts.new
 
     respond_to do |format|
       format.html # new.html.erb

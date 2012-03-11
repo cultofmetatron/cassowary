@@ -7,10 +7,29 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
+    
+    
+    <div id="main" class="container-fluid">
+      <div class="row-fluid">
+        <div id="name" class="span12">
+            hi there yawlll
+          </div>
+      </div>
+      <div class="row-fluid">
+          
+        <div class="span2">
+          <!--Sidebar content-->
+          <p>lol yayyyyyy its awesome ypp!!</p>
+        </div>
+        <div class="span10">
+          <!--Body content-->
+          <%= yield %>
+        </div>
+      </div>
+    </div>
 
 
 
-<%= yield %>
 
 </body>
 </html>
