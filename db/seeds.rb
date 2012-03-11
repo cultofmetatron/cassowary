@@ -8,4 +8,14 @@
 
 User.create(email:'cultofmetatron@aumlogic.com', password:'omnibus64', password_confirmation:'omnibus64')
 
-Blog.create(title:'main', description:'the main blog')
+blog = Blog.create(title:'main', description:'the main blog')
+
+blog.posts.create(user_id:1, published:0, title:"First Post example", description:"description of said post", body:"Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis ")
+blog.posts.create(user_id:1, published:0, title:"Second Post example", description:"description of said post", body:"Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis ")
+blog.posts.create(user_id:1, published:0, title:"Third Post example", description:"description of said post", body:"Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis ")
+blog.posts.create(user_id:1, published:0, title:"Fourth Post example", description:"description of said post", body:"Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis ")
+
+
+
+
+

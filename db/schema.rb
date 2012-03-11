@@ -24,13 +24,14 @@ ActiveRecord::Schema.define(:version => 20120310202918) do
     t.integer  "blog_id"
     t.integer  "user_id"
     t.datetime "date_created"
-    t.integer  "published"
+    t.boolean  "published",      :default => false
     t.datetime "date_published"
+    t.integer  "view_count",     :default => 0
     t.string   "title"
     t.string   "description"
     t.text     "body"
-    t.datetime "created_at",     :null => false
-    t.datetime "updated_at",     :null => false
+    t.datetime "created_at",                        :null => false
+    t.datetime "updated_at",                        :null => false
   end
 
   create_table "rails_admin_histories", :force => true do |t|

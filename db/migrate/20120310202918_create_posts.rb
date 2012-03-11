@@ -6,6 +6,7 @@ class CreatePosts < ActiveRecord::Migration
       t.datetime :date_created
       t.boolean :published, default: false
       t.datetime :date_published
+      t.integer :view_count, default: 0
       t.string  :title
       t.string :description
       t.text :body
