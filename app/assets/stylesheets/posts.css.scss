@@ -4,10 +4,42 @@
 // require "_bootstrap"
 
 body {
-	background-color: black;
+	
 }
 
-ul#blog_roll  li {
-	list-style-type: none;
-	display: block;
+ul#blog_roll  {
+
+	li {
+		list-style-type: none;
+		display: block;
+		
+		padding-left: 5px;
+		
+		
+		
+	}
+	
+	li:hover {
+		border-left: 4px black solid;
+	}
+	
+	
+	p.post_info {
+		text-align: right;
+	}
+	
+	p.actions {
+		text-align: right;
+		
+		> a:after {
+			content:' |';
+		}
+		
+		> a:hover {
+			font-weight: bold;
+			text-decoration: none;
+		}
+		
+	}
+
 }

@@ -6,6 +6,7 @@ class ApplicationController < ActionController::Base
   private
   
   def load_data
+    @user = current_user
     @blog = Blog.first
   end
   

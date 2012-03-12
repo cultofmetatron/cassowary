@@ -2,7 +2,7 @@ class PostsController < ApplicationController
   # GET /posts
   # GET /posts.json
   before_filter :load_data
-  
+  before_filter :authenticate_user!, :only => [:new, :edit, :update, :create, :destroy]
   def index
     
 
@@ -27,7 +27,8 @@ class PostsController < ApplicationController
   # GET /posts/new.json
   def new
     @post = @blog.posts.new
-
+    #@post.user_id = @user.id
+    @user.attach_post(@post)
     respond_to do |format|
       format.html # new.html.erb
       format.json { render json: @post }
@@ -42,8 +43,10 @@ class PostsController < ApplicationController
   # POST /posts
   # POST /posts.json
   def create
-    @post = Post.new(params[:post])
-
+    @post = @blog.posts.new(params[:post])
+    
+    
+    
     respond_to do |format|
       if @post.save
         format.html { redirect_to @post, notice: 'Post was successfully created.' }

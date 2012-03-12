@@ -13,4 +13,9 @@ class User < ActiveRecord::Base
     return self.email
   end
   
+  def attach_post(post)
+    post.user_id = self.id
+  end 
+  
+  
 end
