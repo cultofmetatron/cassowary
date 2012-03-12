@@ -10,15 +10,29 @@
     <div class="navbar navbar-fixed-top">
       <div class="navbar-inner">
         <div class="container">
-        <a class="brand" href="#">
+        <a class="brand" href="/">
           Peter de Croos
             </a>
           <ul class="nav">
               <li><a href="#"> Awesome!!!</a> </li>
               <% if user_signed_in? %>
                 <li><%= link_to 'sign out',  destroy_user_session_path, method: :delete %></li>
+                <li>
+                    <div class="btn-group">
+                        <a class="btn btn-primary dropdown-toggle" data-toggle="dropdown" href="#">
+                        Posts
+                        <span class="caret"></span>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <!-- dropdown menu links -->
+                            <li><%= link_to '(+) New Post', new_post_path, { :class => ""} %></li>
+                            
+                        </ul>
+                         
+                    </div>
+                </li>
               <% else %>
-                <li><%= link_to 'sign in', new_user_session_path %>
+                <li><%= link_to( 'sign in', new_user_session_path, { :class => "btn dropdown-toggle"} ) %>
               <% end %>
           </ul>
         </div>

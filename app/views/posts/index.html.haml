@@ -1,5 +1,6 @@
 %h1 Blog Posts
-
+%div{class:"btn-group post_index_actions span2 offset11"}
+    = link_to "New Post", new_post_path, {class:"btn btn-success"}
 %ul{ id:"blog_roll" }
     -@blog.posts.each do |post|
         %li{ class:"post_index_row row"}
@@ -13,7 +14,7 @@
                     = post.date_created
                     by: 
                 %span{class:"user"}
-                    %span{ class:"label"}= post.user.username
+                    %span{ class:"label label-info"}= post.user.username
                 %div{class:"post_published_meta"}
                     - if post.published?
                         %span{class:"label label-success"}
