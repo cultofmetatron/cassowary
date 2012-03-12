@@ -7,6 +7,24 @@ body {
 	
 }
 
+
+//show page
+h1.post_title {
+	text-transform: capitalize;
+	font-size: 37px;
+	margin-bottom: 10px;
+}
+
+h2.post_description {
+	text-transform: capitalize;
+	border-bottom: 1px solid black;
+}
+
+h3.post_meta {
+	text-align: right;
+}
+
+
 ul#blog_roll  {
 
 	li {

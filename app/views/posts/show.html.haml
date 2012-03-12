@@ -1,22 +1,21 @@
 %p#notice= notice
 
-%p
-  %b Blog:
-  = @post.blog_id
-%p
-  %b User:
-  = @post.user_id
-%p
-  %b Date created:
-  = @post.date_created
-%p
-  %b Published:
-  = @post.published
-%p
-  %b Date published:
-  = @post.date_published
-%p
-  %b Body:
+
+%h1{class:"post_title"}= @post.title
+%h2{class:"post_description"}= @post.description
+%div{class:"post_information"}
+  %h3{class:"post_meta"}
+    %b Date created:
+    = @post.date_created
+  %h3{class:"post_meta"}
+    by: 
+    = @post.user.username  
+  %h3{class:"post_meta"}
+    -if @post.published
+      %span{class:"label label-success"} Published
+    -else
+      %span{class:"label"} Not Published
+%div{class:"post_content"}
   = @post.body
 
 = link_to 'Edit', edit_post_path(@post)

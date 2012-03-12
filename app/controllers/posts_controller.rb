@@ -4,7 +4,11 @@ class PostsController < ApplicationController
   before_filter :load_data
   before_filter :authenticate_user!, :only => [:new, :edit, :update, :create, :destroy]
   def index
-    
+    if current_user != nil
+      @posts = @blog.posts.all
+    else
+      @posts = @blog.posts.where(published:1)
+    end
 
     respond_to do |format|
       format.html # index.html.erb

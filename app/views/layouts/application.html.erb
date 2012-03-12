@@ -15,6 +15,11 @@
             </a>
           <ul class="nav">
               <li><a href="#"> Awesome!!!</a> </li>
+              <% if user_signed_in? %>
+                <li><%= link_to 'sign out',  destroy_user_session_path, method: :delete %></li>
+              <% else %>
+                <li><%= link_to 'sign in', new_user_session_path %>
+              <% end %>
           </ul>
         </div>
       </div>
@@ -24,7 +29,6 @@
        
         
       <div class="row-fluid">
-      
         <div class="span2">
           <!--Sidebar content-->
           <p>lol yayyyyyy its awesome ypp!!</p>

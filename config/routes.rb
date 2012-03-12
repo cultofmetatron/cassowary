@@ -7,7 +7,7 @@ Cassowary::Application.routes.draw do
 
   get "dashboard/index"
   get "home/index"
-
+  post "home/index"
   devise_for :users
   
   root :to => "home#index"
