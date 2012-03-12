@@ -12,7 +12,7 @@ body {
 h1.post_title {
 	text-transform: capitalize;
 	font-size: 37px;
-	margin-bottom: 10px;
+	margin-bottom: 20px;
 }
 
 h2.post_description {
@@ -24,21 +24,34 @@ h3.post_meta {
 	text-align: right;
 }
 
+div.post_published_meta {
+	text-align:right;
+}
+
+.post_index_actions {
+	
+}
+
 
 ul#blog_roll  {
-
+	
+	li:first-child {
+		margin-top: 30px;
+	}
+	
 	li {
 		list-style-type: none;
 		display: block;
 		
 		padding-left: 5px;
-		
+		margin-bottom: 30px;
+		border-left: 2px grey solid;
 		
 		
 	}
 	
 	li:hover {
-		border-left: 4px black solid;
+		border-left: 2px black solid;
 	}
 	
 	

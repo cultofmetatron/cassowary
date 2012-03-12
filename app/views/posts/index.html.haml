@@ -2,24 +2,28 @@
 
 %ul{ id:"blog_roll" }
     -@blog.posts.each do |post|
-        %li{ class:"post"}
+        %li{ class:"post_index_row row"}
             %h3= post.title
             %h4= post.description
             %p= truncate strip_tags(post.body), length: 300, ommission:"..."
             %p{class:"post_info"}
-                %span{class:"user"}
-                    By:
-                    = post.user.email
+                
                 %span{class:"date_created"}
-                    created on: 
+                    %b created on: 
                     = post.date_created
-                - if post.published?
-                    %span{class:"published_date"}
-                        published on: 
-                        = post.date_published
-            %p{class:"actions"}
-                = link_to 'View', post
-                = link_to 'Edit' , edit_post_path(post)
-                = link_to "Delete", post,  confirm: "delete post?", method: :delete
+                    by: 
+                %span{class:"user"}
+                    %span{ class:"label"}= post.user.username
+                %div{class:"post_published_meta"}
+                    - if post.published?
+                        %span{class:"label label-success"}
+                            published
+                    -else
+                        %span{class:"label label"}
+                            not published
+            %div{class:"btn-group post_index_actions span4 offset10"}
+                = link_to 'View', post, {class:"btn btn-success"}
+                = link_to 'Edit' , edit_post_path(post), {class:"btn btn-primary"}
+                = link_to "Delete", post,  confirm: "delete post?", method: :delete, class:"btn btn-danger"
                 
             

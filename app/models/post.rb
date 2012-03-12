@@ -20,14 +20,14 @@ before_create :set_create
   end
   
   def unpublish
-    self.publish = 0
+    self.published = 0
   end
   
   def published?
-    if self.published == 0
-      return false
-    elif self.published == 1
+    if self.published
       return true
+    else
+      return false
     end
   end
 
