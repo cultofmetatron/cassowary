@@ -1,6 +1,11 @@
 Cassowary::Application.routes.draw do
+  
+  #match "posts/:url_slug", :to => "posts#show", :as => "post", :via => "get"
+  
+  
+  
+  #match '/posts' , :as => :posts
   resources :posts
-
   resources :blogs
   #resources :dashboards
   mount RailsAdmin::Engine => '/admin', :as => 'rails_admin'

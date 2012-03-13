@@ -8,6 +8,7 @@ validates_uniqueness_of :title, :url_slug
 before_create :set_create
 
 
+
   def set_create
     self.date_created = Time.now
     if published?

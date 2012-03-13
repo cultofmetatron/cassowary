@@ -1,4 +1,4 @@
-= form_for @post do |f|
+= form_for @post, :url => post_path(@post.url_slug) do |f|
   -if @post.errors.any?
     #error_explanation
       %div{class:"alert"}
