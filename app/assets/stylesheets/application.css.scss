@@ -25,3 +25,20 @@ div#main {
 	padding-top: 70px;
 	border-top: 1px black solid;
 }
+
+h1.ruby_header {
+	
+	> span.method {
+		color: red;
+		
+	}
+	
+	> span.symbol {
+		color: blue;
+	}
+	
+	> span.hash_key {
+		color: green;
+	}
+	
+}

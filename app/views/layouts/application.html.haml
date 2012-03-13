@@ -16,10 +16,20 @@
             -if user_signed_in?
               %li{class:"dropdown"}
                 %a{:class => "dropdown-toggle", "data-toggle" => "dropdown"}
-                  Posts
+                  Blog
                   %span{class:'caret'}
                 %ul{class:"dropdown-menu"}
                   %li= link_to 'View Posts', posts_path
                   %li= link_to '(+) New Post', new_post_path, { :class => ""}
-                  
+            -else
+              %li{class:""}
+                %li= link_to 'Blog', posts_path
+            
+    %div{class:"container-fluid", id:"main"}
+      %div{class:"row-fluid"}
+        %div{class:"span2"}
+          %p
+            This is a SideBar.  Isn't it freaking AWESOME??
+        %div{class:"span10"}
+          =yield
                     

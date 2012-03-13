@@ -1,4 +1,9 @@
-%h1 Blog Posts
+%h1{class:"ruby_header"} 
+    %span{class:"method"} has_many
+    %span{class:"symbol"} :thoughts
+    , 
+    %span{class:"hash_key"} through:
+    %span{class:"symbol"} :articles
 %div{class:"btn-group post_index_actions span2 offset11"}
     = link_to "New Post", new_post_path, {class:"btn btn-success"}
 %ul{ id:"blog_roll" }
