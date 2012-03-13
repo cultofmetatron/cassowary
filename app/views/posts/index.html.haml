@@ -1,11 +1,11 @@
 %h1{class:"ruby_header"} 
     %span{class:"method"} has_many
-    %span{class:"symbol"} :thoughts
-    , 
+    %span{class:"symbol"} :thoughts,
     %span{class:"hash_key"} through:
-    %span{class:"symbol"} :articles
-%div{class:"btn-group post_index_actions span2 offset11"}
-    = link_to "New Post", new_post_path, {class:"btn btn-success"}
+    %span{class:"symbol"} :blog
+-if user_signed_in?
+    %div{class:"btn-group post_index_actions span2 offset11"}
+        = link_to "New Post", new_post_path, {class:"btn btn-success"}
 %ul{ id:"blog_roll" }
     -@blog.posts.each do |post|
         %li{ class:"post_index_row row"}
@@ -14,22 +14,25 @@
             %p= truncate strip_tags(post.body), length: 300, ommission:"..."
             %p{class:"post_info"}
                 
-                %span{class:"date_created"}
+                %div{class:"date_created span4"}
                     %b created on: 
                     = post.date_created
                     by: 
-                %span{class:"user"}
-                    %span{ class:"label label-info"}= post.user.username
-                %div{class:"post_published_meta"}
-                    - if post.published?
-                        %span{class:"label label-success"}
-                            published
-                    -else
-                        %span{class:"label label"}
-                            not published
-            %div{class:"btn-group post_index_actions span4 offset10"}
-                = link_to 'View', post, {class:"btn btn-success"}
-                = link_to 'Edit' , edit_post_path(post), {class:"btn btn-primary"}
-                = link_to "Delete", post,  confirm: "delete post?", method: :delete, class:"btn btn-danger"
-                
-            
+                    %span{class:"user"}
+                        %span{ class:"label label-info"}= post.user.username
+                        -if user_signed_in?
+                            - if post.published?
+                                %span{class:"label label-success"}
+                                    published
+                            -else
+                                %span{class:"label label"}
+                                    not published
+            -if user_signed_in?
+                %div{class:"btn-group post_index_actions span4 offset10"}
+                    = link_to "Delete", post,  confirm: "delete post?", method: :delete, class:"btn btn-danger"
+                    = link_to 'Edit' , edit_post_path(post), {class:"btn btn-primary"}
+                    = link_to 'View', post, {class:"btn btn-success"}
+            -else
+                %div{class:"btn-group post_index_actions span3 pull-right"}
+                    = link_to 'View', post, {class:"btn btn-success"}
+                    = link_to 'Comments (#)', post, {class:"btn btn-success"}

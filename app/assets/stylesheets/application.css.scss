@@ -26,6 +26,17 @@ div#main {
 	border-top: 1px black solid;
 }
 
+div#side_nav {
+	h1 {
+		font-size: 15px;
+		margin-bottom: 1px;
+		padding-bottom: 0px;
+		text-transform: capitalize;
+	}
+	
+}
+
+
 h1.ruby_header {
 	
 	> span.method {
