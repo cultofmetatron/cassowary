@@ -2,10 +2,11 @@ Cassowary::Application.routes.draw do
   resources :posts
 
   resources :blogs
-
+  #resources :dashboards
   mount RailsAdmin::Engine => '/admin', :as => 'rails_admin'
 
   get "dashboard/index"
+  
   get "home/index"
   post "home/index"
   devise_for :users
