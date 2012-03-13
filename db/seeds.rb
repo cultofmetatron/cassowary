@@ -10,10 +10,10 @@ User.create(username:"cultofmetatron", email:'cultofmetatron@aumlogic.com', pass
 
 blog = Blog.create(title:'main', description:'the main blog')
 
-blog.posts.create(user_id:1, published:0, title:"First Post example", description:"description of said post", body:"Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis ")
-blog.posts.create(user_id:1, published:0, title:"Second Post example", description:"description of said post", body:"Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis ")
-blog.posts.create(user_id:1, published:0, title:"Third Post example", description:"description of said post", body:"Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis ")
-blog.posts.create(user_id:1, published:0, title:"Fourth Post example", description:"description of said post", body:"Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis ")
+blog.posts.create(user_id:1, published:0, url_slug:"first", title:"First Post example", description:"description of said post", body:"Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis ")
+blog.posts.create(user_id:1, published:0, url_slug:"second", title:"Second Post example", description:"description of said post", body:"Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis ")
+blog.posts.create(user_id:1, published:0, url_slug:"third", title:"Third Post example", description:"description of said post", body:"Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis ")
+blog.posts.create(user_id:1, published:0, url_slug:"fourth", title:"Fourth Post example", description:"description of said post", body:"Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis ")
 
 
 

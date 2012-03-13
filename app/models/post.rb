@@ -1,8 +1,9 @@
 class Post < ActiveRecord::Base
 belongs_to :blog
 belongs_to :user
-validates_presence_of :user_id, :blog_id, :title, :body
+validates_presence_of :user_id, :blog_id, :url_slug, :title, :body
 validates_numericality_of :published, less_than_or_equal_to: 1
+validates_uniqueness_of :title, :url_slug
 
 before_create :set_create
 
