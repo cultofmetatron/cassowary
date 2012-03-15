@@ -9,7 +9,7 @@
         = link_to "New Post", new_post_path, {class:"btn btn-success"}
 %ul{ id:"blog_roll" }
     -@blog.posts.each do |post|
-        %li{ class:"post_index_row row"}
+        %li{ class:"post_index_row row span12"}
             %h3= post.title
             %h4= post.description
             %p= truncate strip_tags(post.body), length: 300, ommission:"..."
@@ -29,7 +29,7 @@
                                 %span{class:"label label"}
                                     not published
             -if user_signed_in?
-                %div{class:"btn-group post_index_actions span4 offset10"}
+                %div{class:"btn-group post_index_actions span4 offset9"}
                     = link_to "Delete", post_path(post.url_slug),  confirm: "delete post?", method: :delete, class:"btn btn-danger"
                     = link_to 'Edit' , edit_post_path(post.url_slug), {class:"btn btn-primary"}
                     = link_to 'View', post_path(post.url_slug), {class:"btn btn-success"}
