@@ -1,3 +1,19 @@
 == Welcome to Cassowary!!
 
 cassowary is my attempt to build an awesome kiss blog engine in rails3
+
+so far, posts are working for the most part. today I will be working on a photoshop gallary.
+
+ok lets see here. for a gallary module, the following things need to happen.
+
+1) user goes to website and clicks on gallery
+2) goes to page where you can choose to see gallaries with an associated null picture if no primary photo exists.
+3)in the gallery, you can then choose to add or remove a series of photos from the gallery. 
+when a larger version of the photo is selected, then a fullsize version becomes visible.
+
+#h1 storage
+
+  the image is stored in several formats, 
+    1 - original
+    2 - fullscreen
+            -
