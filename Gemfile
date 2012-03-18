@@ -21,7 +21,8 @@ group :assets do
 end
 
 gem 'bootstrap-sass'
-
+gem 'rack-cache', :require => 'rack/cache'
+gem 'dragonfly', '~>0.9.11'
 gem 'redcarpet'
 #gem 'liquid'
 gem 'jquery-rails'
