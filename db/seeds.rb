@@ -6,7 +6,7 @@
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
-User.create(username:"cultofmetatron", email:'cultofmetatron@aumlogic.com', password:'omnibus64', password_confirmation:'omnibus64')
+User.create(username:"cultofmetatron", email:'cultofmetatron@aumlogic.com', password:'oberon64', password_confirmation:'omnibus64')
 
 blog = Blog.create(title:'main', description:'the main blog')
 
