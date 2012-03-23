@@ -24,6 +24,7 @@ gem 'bootstrap-sass'
 
 gem 'redcarpet'
 #gem 'liquid'
+gem "friendly_id", "~> 4.0.3"
 gem 'jquery-rails'
 gem "haml-rails"
 gem 'devise'
