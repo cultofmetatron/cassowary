@@ -48,7 +48,7 @@ class PostsController < ApplicationController
   # POST /posts.json
   def create
     @post = @blog.posts.new(params[:post])
-    
+    @user.attach_post(@post)
     
     
     respond_to do |format|

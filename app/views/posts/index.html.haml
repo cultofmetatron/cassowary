@@ -3,9 +3,7 @@
     %span{class:"symbol"} :thoughts,
     %span{class:"hash_key"} through:
     %span{class:"symbol"} :blog
--if user_signed_in?
-    %div{class:"btn-group post_index_actions span2 offset10"}
-        = link_to "New Post", new_post_path, {class:"btn btn-success"}
+
 %ul{ id:"blog_roll" }
     -@blog.posts.each do |post|
         %li{ class:"post_index_row row"}
@@ -28,11 +26,11 @@
                                 %span{class:"label label"}
                                     not published
             -if user_signed_in?
-                %div{class:"btn-group post_index_actions span4 offset8"}
+                %div{class:"btn-group post_index_actions span3 offset6"}
                     = link_to "Delete", post,  confirm: "delete post?", method: :delete, class:"btn btn-danger"
                     = link_to 'Edit' , edit_post_path(post), {class:"btn btn-primary"}
                     = link_to 'View', post, {class:"btn btn-success"}
             -else
-                %div{class:"btn-group post_index_actions span3 pull-right"}
+                %div{class:"btn-group post_index_actions span3 offset6"}
                     = link_to 'View', post, {class:"btn btn-success"}
                     = link_to 'Comments (#)', post, {class:"btn btn-success"}

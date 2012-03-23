@@ -7,6 +7,8 @@ validates_presence_of :user_id, :blog_id, :title, :body
 validates_numericality_of :published, less_than_or_equal_to: 1
 validates_uniqueness_of :title, :slug
 
+attr_accessible :title, :description, :body, :published
+
 before_create :set_create
 
 
