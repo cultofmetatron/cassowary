@@ -1,10 +1,7 @@
 Cassowary::Application.routes.draw do
   
-  match '/posts/new', to: 'posts#new', as: :new_post
-  match '/posts/', to: 'posts#index', as: :posts_path
-  match '/posts/:id/edit', to: 'posts#edit', as: :edit_post_path
-  match '/posts/:id', to: 'posts#show', as: :post_path
-  #resources :posts
+  
+  resources :posts
   #resources :blogs
   
   mount RailsAdmin::Engine => '/admin', :as => 'rails_admin'
