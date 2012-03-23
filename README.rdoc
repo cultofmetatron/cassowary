@@ -1,3 +1,15 @@
 == Welcome to Cassowary!!
 
 cassowary is my attempt to build an awesome kiss blog engine in rails3
+
+the portfolio will be built with two main models, gallery and portfolio and routed under 
+
+portfolio version 1
+portfolio/
+  gallery/
+  -name - lookup slug
+  -description
+     photo/
+      description - *optional
+      
+      
