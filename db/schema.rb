@@ -23,7 +23,7 @@ ActiveRecord::Schema.define(:version => 20120323143852) do
   create_table "posts", :force => true do |t|
     t.integer  "blog_id"
     t.integer  "user_id"
-    t.string   "url_slug"
+    t.string   "slug"
     t.datetime "date_created"
     t.boolean  "published",      :default => false
     t.datetime "date_published"
@@ -35,7 +35,7 @@ ActiveRecord::Schema.define(:version => 20120323143852) do
     t.datetime "updated_at",                        :null => false
   end
 
-  add_index "posts", ["url_slug"], :name => "index_posts_on_url_slug", :unique => true
+  add_index "posts", ["slug"], :name => "index_posts_on_slug", :unique => true
 
   create_table "rails_admin_histories", :force => true do |t|
     t.text     "message"

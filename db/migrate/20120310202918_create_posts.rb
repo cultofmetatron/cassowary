@@ -3,7 +3,7 @@ class CreatePosts < ActiveRecord::Migration
     create_table :posts do |t|
       t.integer :blog_id
       t.integer :user_id
-      t.string :url_slug
+      t.string :slug
       t.datetime :date_created
       t.boolean :published, default: false
       t.datetime :date_published

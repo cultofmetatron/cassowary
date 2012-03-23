@@ -1,5 +1,5 @@
 class AddIndexSlugToPosts < ActiveRecord::Migration
   def change
-    add_index :posts, :url_slug, unique: true
+    add_index :posts, :slug, unique: true
   end
 end
