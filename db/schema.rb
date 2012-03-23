@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120323143852) do
+ActiveRecord::Schema.define(:version => 20120323202910) do
 
   create_table "blogs", :force => true do |t|
     t.string   "title"
@@ -19,6 +19,16 @@ ActiveRecord::Schema.define(:version => 20120323143852) do
     t.datetime "created_at",  :null => false
     t.datetime "updated_at",  :null => false
   end
+
+  create_table "galleries", :force => true do |t|
+    t.string   "name"
+    t.string   "slug"
+    t.text     "description"
+    t.datetime "created_at",  :null => false
+    t.datetime "updated_at",  :null => false
+  end
+
+  add_index "galleries", ["slug"], :name => "index_galleries_on_slug", :unique => true
 
   create_table "posts", :force => true do |t|
     t.integer  "blog_id"

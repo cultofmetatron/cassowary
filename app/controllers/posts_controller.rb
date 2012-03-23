@@ -1,7 +1,7 @@
 class PostsController < ApplicationController
   # GET /posts
   # GET /posts.json
-  before_filter :load_data
+  
   before_filter :authenticate_user!, :only => [:new, :edit, :update, :create, :destroy]
   def index
     if current_user != nil
