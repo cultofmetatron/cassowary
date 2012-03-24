@@ -1,11 +1,13 @@
-= form_for [@gallery, @photo]  do |f|
+= form_for [@gallery, @photo], :html => {:multipart => true}   do |f|
   -if @photo.errors.any?
     #error_explanation
       %h2= "#{pluralize(@photo.errors.count, "error")} prohibited this photo from being saved:"
       %ul
         - @photo.errors.full_messages.each do |msg|
           %li= msg
-
+  .field
+    = f.label "upload photo"
+    = f.file_field :image
   .field
     = f.label "description: (optional)"
     = f.text_area :description

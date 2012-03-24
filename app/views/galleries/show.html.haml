@@ -13,7 +13,7 @@
 %ul
   - @gallery.photos.each do |photo|
     %li
-      = photo.description
+      =link_to image_tag(photo.image.thumb("200x200").url), gallery_photo_path(@gallery, photo)
   
 
 

@@ -1,6 +1,7 @@
 %p#notice= notice
 
-
+%p
+  = image_tag @photo.image.thumb('902x602').url
 %p
   = @photo.description
 

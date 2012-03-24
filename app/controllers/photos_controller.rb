@@ -4,13 +4,7 @@ class PhotosController < ApplicationController
   # GET /photos
   # GET /photos.json
   def index
-    
-    @photos = @gallery.photos.all
-
-    respond_to do |format|
-      format.html # index.html.erb
-      format.json { render json: @photos }
-    end
+    redirect_to gallery_url(@gallery)
   end
 
   # GET /photos/1

@@ -13,3 +13,11 @@ portfolio/
       description - *optional
       
       
+      the image is stored in several formats, 
+        1 - original - 3872x2592
+        2 - thumbnails
+              -small - 160x107
+              -large - 360x241
+        3 - fullscreen
+              -standard 902x602
+              -fullsize 1024x685
