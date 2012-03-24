@@ -1,0 +1,7 @@
+%h1 Editing photo
+
+= render 'form'
+
+= link_to 'Show', gallery_photo_path(@gallery, @photo)
+\|
+= link_to 'Back', gallery_photos_path(@gallery)

@@ -1,5 +1,9 @@
 Cassowary::Application.routes.draw do
-  resources :galleries
+  
+
+  resources :galleries do
+    resources :photos
+  end
 
   resources :posts
 
