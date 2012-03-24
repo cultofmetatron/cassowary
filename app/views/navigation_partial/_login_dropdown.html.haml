@@ -1,20 +1,9 @@
-#!/usr/bin/env python
-# encoding: utf-8
-"""
-_login_dropdown.html.py
-
-Created by Peter de Croos on 2012-03-23.
-Copyright (c) 2012 __MyCompanyName__. All rights reserved.
-"""
-
-import sys
-import os
-
-
-def main():
-  pass
-
-
-if __name__ == '__main__':
-  main()
-
+-if user_signed_in?
+  %li{class:"dropdown"}
+    %a{:class => "dropdown-toggle", "data-toggle" => "dropdown"}
+      = current_user.username
+      %span{class:'caret'}
+    %ul{class:"dropdown-menu"}
+      %li= link_to "Logout", destroy_user_session_path, :method => :delete
+-else
+  %li= link_to "Login", new_user_session_path
