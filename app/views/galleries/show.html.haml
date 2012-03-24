@@ -10,6 +10,13 @@
   %b Description:
   = @gallery.description
 
+%ul
+  - @gallery.photos.each do |photo|
+    %li
+      = photo.description
+  
+
+
 = link_to 'Edit', edit_gallery_path(@gallery)
 \|
 = link_to 'Back', galleries_path

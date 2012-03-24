@@ -1,10 +1,7 @@
 %p#notice= notice
 
+
 %p
-  %b Gallery:
-  = @photo.gallery_id
-%p
-  %b Description:
   = @photo.description
 
 = link_to 'Edit', edit_gallery_photo_path(@gallery, @photo)
