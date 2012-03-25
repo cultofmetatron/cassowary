@@ -2,7 +2,7 @@
 
 %p
   = image_tag @photo.image.thumb('902x602').url
-  = image_tag @photo.image.thumb('902x602').process(:convert, '-blur 6x20').url
+
 %p
   = @photo.description
 

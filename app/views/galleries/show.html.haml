@@ -1,22 +1,18 @@
-%p#notice= notice
+%div{ id:"photo_gallery"}
+  %p#notice= notice
 
-%p
-  %b Name:
-  = @gallery.name
-%p
-  %b Slug:
-  = @gallery.slug
-%p
-  %b Description:
-  = @gallery.description
+  %h1
+    = @gallery.name
+  %h2
+    = @gallery.description
 
-%ul
-  - @gallery.photos.each do |photo|
-    %li
-      =link_to image_tag(photo.image.thumb("200x200").url), gallery_photo_path(@gallery, photo)
+  %ul
+    - @gallery.photos.each do |photo|
+      %li
+        =link_to image_tag(photo.image.thumb("200x200").url), gallery_photo_path(@gallery, photo)
   
 
 
-= link_to 'Edit', edit_gallery_path(@gallery)
-\|
-= link_to 'Back', galleries_path
+  = link_to 'Edit', edit_gallery_path(@gallery)
+  \|
+  = link_to 'Back', galleries_path
