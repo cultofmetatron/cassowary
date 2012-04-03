@@ -7,6 +7,9 @@ div#photo_gallery {
 		text-transform: capitalize;
 		font-size: 55px;
 		margin-bottom: 5px;
+		opacity: .2;
+		text-shadow: 10px 10px 10px white;
+		color: white;
 	}
 	h1, h2 {
 		
@@ -14,7 +17,7 @@ div#photo_gallery {
 	
 	ul {
 		display: block;
-		
+		text-align: center;
 	
 		li {
 			display:inline-block;

@@ -9,7 +9,7 @@
   %ul
     - @gallery.photos.each do |photo|
       %li
-        =link_to image_tag(photo.image.thumb("200x200").url), gallery_photo_path(@gallery, photo)
+        =link_to image_tag(photo.image.thumb("360x241").url), gallery_photo_path(@gallery, photo)
   
 
 

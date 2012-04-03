@@ -1,0 +1,15 @@
+!!! 5
+%html
+  %head
+    %title 
+      = @title or "Cassorwary - A blog engine for rails!!"
+    = stylesheet_link_tag    "application", :media => "all"
+    = javascript_include_tag "application" 
+    = csrf_meta_tags 
+  %body
+    =render :partial => "navigation_partial/topnav"
+    
+    %div{class:"container", id:"main"}
+      %div{class:"row"}
+        %div{class:"span12"}
+          =yield
