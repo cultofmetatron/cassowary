@@ -6,10 +6,10 @@
   %h2
     = @gallery.description
 
-  %ul
+  %ul.span12
     - @gallery.photos.each do |photo|
-      %li
-        =link_to image_tag(photo.image.thumb("360x241").url), gallery_photo_path(@gallery, photo)
+      %li.span4
+        =link_to image_tag(photo.image.thumb("300x241").url), gallery_photo_path(@gallery, photo), {:"data-fullsize" => photo.image.thumb("902x602").url }
   
 
 

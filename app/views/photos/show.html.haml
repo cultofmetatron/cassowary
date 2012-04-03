@@ -9,3 +9,6 @@
 = link_to 'Edit', edit_gallery_photo_path(@gallery, @photo)
 \|
 = link_to 'Back', gallery_photos_path(@gallery)
+-if user_signed_in?
+  |
+  = link_to 'Destroy', gallery_photo_path(@gallery, @photo), :confirm => 'Are you sure?', :method => :delete
