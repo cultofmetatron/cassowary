@@ -19,6 +19,10 @@
 
 /* resets */
 
+* {
+	z-index: 0;
+}
+
 body {
 	background-image:url('background.png');
 }
