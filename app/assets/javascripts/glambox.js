@@ -5,7 +5,7 @@
   
     // Do your awesome plugin stuff here
 	var self = this;
-	$('ul > li', self).delegate( 'a', "click",  function(event) {
+	var lightboxIn  = function(event) {
 			event.preventDefault();
 			var img_path = $(this).data("fullsize");
 			var full_path = '<img src="' + img_path + '">';
@@ -13,7 +13,15 @@
 				"background-image":"url(" + img_path + ")",
 			});
 			$("div#photo_gallery_panel").fadeIn("slow");
-	});
+	}
+	$('ul > li', self).delegate( 'a', "click", lightboxIn);
+	
+	$("div#photo_gallery_panel").bind({
+		"click": function(event) {
+			$(this).fadeOut("slow");
+		},
+	})
+	
   };
 })( jQuery );
 

@@ -9,7 +9,9 @@
         %li{ class:"post_index_row row"}
             %h3= post.title
             %h4= post.description
-            %p= truncate strip_tags(post.body), length: 300, ommission:"..."
+            %p
+                = truncate strip_tags(post.body), length: 600, ommission:"..."
+                =link_to '[Read More]', post
             %p{class:"post_info"}
                 
                 %div{class:"date_created span4"}
