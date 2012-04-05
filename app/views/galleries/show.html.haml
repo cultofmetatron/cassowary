@@ -3,7 +3,7 @@
 
   %h1
     = @gallery.name
-  %h2
+  -#%h2
     = @gallery.description
 
   %ul.span12
@@ -12,7 +12,9 @@
         =link_to image_tag(photo.image.thumb("300x241").url), gallery_photo_path(@gallery, photo), {:"data-fullsize" => photo.image.thumb("902x602").url }
   
 
-
-  = link_to 'Edit', edit_gallery_path(@gallery)
-  \|
-  = link_to 'Back', galleries_path
+%ul#bottom-menu.span12
+  %li= link_to 'Back', galleries_path
+  -if user_signed_in?
+    %li= link_to 'Edit', edit_gallery_path(@gallery)
+    %li= link_to 'Add Photo', new_gallery_photo_path(@gallery)
+  

@@ -17,13 +17,16 @@ div#photo_gallery_panel {
 		z-index: 1;
 		width: 100%;
 		height: 100%;
+		margin: auto;
 	}
 	
 	img {
 		display: block;
-		position: fixed;
-		background-attachment: center;
+		position: relative;
 		margin: auto;
+		margin-top: 50px;
+		border: 2px solid rgba(0, 0, 0, .5);
+		box-shadow: -10px -10px 10px rgba(255, 255, 255, .5), 10px 10px 10px rgba(255, 255, 255, .5) ;
 	}
 	
 }

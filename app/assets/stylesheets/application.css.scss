@@ -27,6 +27,11 @@ body {
 	background-image:url('background.png');
 }
 
+p {
+	font-size: 17px;
+	line-height: 21px;
+}
+
 div#main {
 	padding-top: 70px;
 	border-top: 1px black solid;
@@ -83,3 +88,34 @@ h1.ruby_header {
 	}
 	
 }
+
+ul#bottom-menu {
+	display: block;
+	text-align: center;
+	
+	li {
+		display: inline;
+		:after {
+			content: ' | ';
+			
+		}
+		
+		
+		a {
+			font-size: 35px;
+			
+		}
+		a:hover {
+			text-decoration: none;
+		}
+	}
+	
+	> li:last-child {
+		:after {
+		content: '';
+		}
+	}
+	
+}
+
+
