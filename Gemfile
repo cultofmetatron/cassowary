@@ -23,6 +23,8 @@ end
 gem 'bootstrap-sass'
 
 gem 'redcarpet'
+gem 'albino'
+gem 'nokogiri'
 #gem 'liquid'
 gem "friendly_id", "~> 4.0.3"
 gem 'fog'

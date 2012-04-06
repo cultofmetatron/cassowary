@@ -16,7 +16,7 @@
     -else
       %span{class:"label"} Not Published
 %div{class:"post_content"}
-  = @post.body
+  = markdown(@post.body)
 
 = link_to 'Edit', edit_post_path(@post)
 \|
