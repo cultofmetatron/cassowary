@@ -9,9 +9,15 @@
         %li{ class:"post_index_row row"}
             %h3= post.title
             %h4= post.description
+            -if user_signed_in?
+                %ul{class:"post_index_actions"}
+                    %li= link_to "Delete", post,  confirm: "delete post?", method: :delete, class:""
+                    %li= link_to 'Edit' , edit_post_path(post), {class:""}
+                    %li= link_to 'View', post, {class:""}
+            
             %div
                 = markdown(truncate(post.body, length: 600, ommission:"..."))
-                =link_to '[Read More]', post
+                =link_to 'Read More', post, {class:"post-readmore"}
             %p{class:"post_info"}
                 
                 %div{class:"date_created span4"}
@@ -27,12 +33,3 @@
                             -else
                                 %span{class:"label label"}
                                     not published
-            -if user_signed_in?
-                %div{class:"btn-group post_index_actions span3 offset6"}
-                    = link_to "Delete", post,  confirm: "delete post?", method: :delete, class:"btn btn-danger"
-                    = link_to 'Edit' , edit_post_path(post), {class:"btn btn-primary"}
-                    = link_to 'View', post, {class:"btn btn-success"}
-            -else
-                %div{class:"btn-group post_index_actions span3 offset6"}
-                    = link_to 'View', post, {class:"btn btn-success"}
-                    = link_to 'Comments (#)', post, {class:"btn btn-success"}

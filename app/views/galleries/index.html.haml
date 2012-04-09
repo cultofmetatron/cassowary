@@ -1,5 +1,7 @@
 %h1 Photography
 %div{class:"span12", id:""}
+  -if user_signed_in?
+    = link_to 'New Gallery', new_gallery_path
   %ul{class:"span12", id:"gallery-list"}
     - @galleries.each do |gallery|
       %li{class:"span12"}
@@ -14,5 +16,4 @@
               %li= link_to 'Edit', edit_gallery_path(gallery)
               %li= link_to 'Destroy', gallery, :confirm => 'Are you sure?', :method => :delete
 
--if user_signed_in?
-  = link_to 'New Gallery', new_gallery_path
+
